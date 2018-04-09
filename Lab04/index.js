@@ -3,6 +3,7 @@ var app = express()
 app.use(express.static('public'))
 app.use(express.static('files'))
 app.use('/static', express.static('public'))
+app.use("landingPasge-Sosa")
 
 app.get('/', function(req,res){
     res.send('Hola mundo! en Express:)')
