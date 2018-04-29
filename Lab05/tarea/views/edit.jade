@@ -1,0 +1,21 @@
+html 
+	head
+		meta(name='viewport', content='width=device-width, initial-sacle=1')
+		title Dhamir
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		body
+			block content
+				.container
+					form(method='POST' action='/user/update')
+								div.form-group
+									input(type="hidden" name="id" value="#{data._id}")
+									label(for='nombre') Nombre:
+									input#nombre.form-control(type='text' name='nombre' value='#{data.nombre}')
+								div.form-group
+									label(for='password') Password:
+									input#password.form-control(type='text' name='password' value='#{data.password}')
+								div.form-group
+									label(for='email') Email:
+									input#email.form-control(type='text' name='email' value='#{data.email}')
+								button.btn.btn-primary(type='submit') Editar
+								a.btn.btn-large.btn-primary(href="/usuario") Volver 

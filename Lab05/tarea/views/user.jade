@@ -1,0 +1,27 @@
+html 
+	head
+		meta(name='viewport', content='width=device-width, initial-sacle=1')
+		title Dhuram
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		body
+			block content
+				.container
+					table.table
+						thead
+							tr
+								th ID
+								th Nombre
+								th Password
+								th Email
+						tbody
+							for item in data
+								tr
+									td= item._id
+									td= item.nombre
+									td= item.password
+									td= item.email
+									td
+										a(href="/user/update/#{item._id}").btn.btn-large.btn-success Editar
+									td
+										a(href="/user/delete/#{item._id}").btn.btn-large.btn-danger Eliminar
+					a(href='/create') Crear Nuevo Usuario
