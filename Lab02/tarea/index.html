@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<title>Calculadora</title>
+
+</head>
+<body>
+	<div class="container-fluid">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">Yoshi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Operaciones <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	</div>
+
+<div class="container">
+<h1>Operaciones Basicas</h1>
+  <form method="_POST" action="index.html">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Primer numero</label>
+      <input type="number" class="form-control" name="num1" placeholder="Ingrese primer numero">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="nombres">Segundo numero</label>
+      <input type="number" class="form-control" name="num2" placeholder="Ingrese segundo numero">
+    </div>
+  </div>
+
+    <div class="form-group col-md-4">
+      <label for="inputState">Operacion</label>
+      <select name="operacion" class="form-control">
+        <option value="sumar">Sumar</option>
+        <option value="restar">Restar</option>
+        <option value="multiplicar">Multiplicar</option>
+        <option value="division">Dividir</option>
+      </select>
+    </div>
+  <button type="submit" class="btn btn-primary">Resolver</button>
+</form>
+
+<h1>Resultado</h1>
+<h3>{res}</h3>
+</div>
+
+	
+</body>
+</html>
